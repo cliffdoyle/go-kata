@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-
+//Function that returns a slice of int with all the values between the min and max
 func AppendRange(min, max int) []int {
 	var result []int
 	if min >= max {
