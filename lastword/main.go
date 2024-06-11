@@ -1,8 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"os"
+
+	"github.com/01-edu/z01"
 )
 
 func main() {
@@ -12,17 +13,20 @@ func main() {
 	}
 	args1 := args[0]
 
-	word := ""
+	var word string
 	for i := len(args1) - 1; i > 0; i-- {
-		// if word == "" && string(args1[i]) == " " {
-		// 	continue
-		// }
+		if word == "" && string(args1[i]) == " " {
+			continue
+		}
 		if word != "" && string(args1[i]) == " " {
 			break
 		}
-		word = string(args1[i]) + word
+		word = string((args1[i])) + word
 		// fmt.Print(string(args1[i]))
 	}
 
-	fmt.Println(word)
+	for _, ch := range word {
+		z01.PrintRune(ch)
+	}
+	z01.PrintRune('\n')
 }

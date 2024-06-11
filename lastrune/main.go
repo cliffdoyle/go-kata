@@ -2,18 +2,20 @@ package main
 
 import "fmt"
 
+func LastRune(s string) rune {
+	var lastrune rune
 
-func LastRune(s string)rune{
-	firstRune := []rune(s)
+	for _, char := range s {
+		lastrune = char
+		
 
-	return firstRune[len(s)-1]
-
-	
+	}
+	return lastrune
 }
 
 func main() {
-	fmt.Println(LastRune("Hello!"))
-	fmt.Println(LastRune("Salut!"))
-	fmt.Println(LastRune("Ola!"))
+	fmt.Println(string(LastRune("Hello")))
+	fmt.Println(LastRune("Salut"))
+	fmt.Println(LastRune("Ola"))
 	fmt.Println()
 }

@@ -28,6 +28,16 @@ func getFloat() (float64, error) {
 }
 
 func main() {
+	var count [3]int
+	count[0]++
+	count[2]++
+	count[2]++
+
+	count1:=fmt.Sprintf("This the array increment in action %#v",count)
+
+	fmt.Println(count1)
+
+
 	fmt.Print("Enter grade: ")
 	grade, err := getFloat()//Call getFloat to get a grade
 	if err != nil {
@@ -41,5 +51,7 @@ func main() {
 		status = "Failing"
 	}
 
-	fmt.Println("A grade of", grade, "is", status)
+	fmt.Println("A grade of", grade, "is", status) 
+
+	
 }

@@ -4,8 +4,8 @@ import "fmt"
 
 func main(){
 	result:=""
-for i:='a';i<='z';i++{
-	if i%2==0{
+for i:='z';i>='a';i--{
+	if i%2==1{
 		result+=string(i-32)
 	}else{
 		result+=string(i)
